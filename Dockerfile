@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 RUN --mount=type=secret,id=test_username \
-  --mount=type=secrte,id=test_password \
+  --mount=type=secret,id=test_password \
   set -eu; \
   username="$(cat /run/secrets/test_username)"; \
   password="$(cat /run/secrets/test_password)"; \
